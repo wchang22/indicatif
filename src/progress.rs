@@ -611,7 +611,7 @@ impl ProgressBar {
                 state.est.record_step(new_pos);
             }
             if new_pos >= state.draw_next {
-                state.draw_next = new_pos.saturating_add(state.draw_delta);
+                state.draw_next += state.draw_delta;
                 draw = true;
             }
         }
